@@ -398,7 +398,7 @@ name: Linter CI
 on:  
   push:  
     branches:  
-      - main  
+      - master 
 
 jobs:  
   lint-check:  
