@@ -11,7 +11,7 @@ In this project, we'll use GitHub Actions as our CI tool to check for syntax err
 
 - How to set up GitHub Actions in a project.
 
-- How to create a simple HTML/CSS form page.
+- How to create a simple HTML file.
 
 - How to configure a GitHub Actions workflow to run a syntax check.
 
