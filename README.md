@@ -3,7 +3,7 @@
 ### Introduction
 Continuous integration also short form for CI is a software development lifecycle where code changes are automatically tested and validated before merging into the main branch. This helps catch errors early, maintain code quality, and streamline development.
 
-In this project, we'll use GitHub Actions as our CI tool to check for syntax errors in an HTML/CSS form page whenever changes are pushed to the repository.
+In this project, we'll use GitHub Actions as our CI tool to check for syntax errors in HTML simple four-card-feature page whenever changes are pushed to the repository.
 
 ### What You'll Learn
 
@@ -17,7 +17,7 @@ In this project, we'll use GitHub Actions as our CI tool to check for syntax err
 
 ## Project Overview
 
-We'll create a basic HTML and CSS card feature and use a GitHub Actions workflow to check for syntax errors whenever we push changes. The workflow will be defined in a .yml file inside the .github/workflows/ directory.
+We'll create a basic HTML card feature and use a GitHub Actions workflow to check for syntax errors whenever we push changes. The workflow will be defined in a .yml file inside the .github/workflows/ directory.
 
 ### Steps:
 
@@ -31,7 +31,6 @@ Inside the repository, create an index.html file and add the following:
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -88,237 +87,6 @@ Inside the repository, create an index.html file and add the following:
 
 ```
 
-Inside the repository, create an styles.css file and add the following:
-
-```
-/* font-family: 'Poppins', sans-serif; */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background-color: rgb(250, 250, 250);
-}
-.card-container {
-  margin: 4rem 2rem 4rem 2rem;
-}
-
-.header-container h1 span {
-  font-weight: 200;
-  font-size: 25px;
-  color: hsl(0, 2%, 66%);
-}
-
-.header-container h1 {
-  font-weight: 600;
-  font-size: 26px;
-  color: hsl(240, 1%, 18%);
-  margin-bottom: 15px;
-}
-
-.header-container p {
-  font-weight: 400;
-  font-size: 15px;
-  color: hsl(0, 2%, 66%);
-  margin-bottom: 40px;
-  text-align: start;
-}
-
-.first-card {
-  background-color: rgb(255, 255, 255);
-  height: 300px;
-  border-top: 5px solid hsl(180, 62%, 55%);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(231, 236, 242);
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.second-card {
-  background-color: rgb(255, 255, 255);
-  height: 300px;
-  border-top: 5px solid hsl(0, 78%, 62%);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(231, 236, 242);
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.third-card {
-  background-color: rgb(255, 255, 255);
-  height: 300px;
-  border-top: 5px solid hsl(34, 97%, 64%);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(231, 236, 242);
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.forth-card {
-  background-color: rgb(255, 255, 255);
-  height: 300px;
-  border-top: 5px solid hsl(212, 86%, 64%);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(231, 236, 242);
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.first-card h3,
-.second-card h3,
-.third-card h3,
-.forth-card h3 {
-  font-weight: 600;
-  font-size: 26px;
-  padding: 30px 30px 20px 30px;
-}
-
-.first-card p,
-.second-card p,
-.third-card p,
-.forth-card p {
-  font-weight: 200;
-  font-size: 15px;
-  color: hsl(0, 2%, 66%);
-  padding: 0 30px 0 30px;
-  line-height: 25px;
-}
-
-.first-card img,
-.second-card img,
-.third-card img,
-.forth-card img {
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-}
-
-@media screen and (min-width: 768px) {
-  .header-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .header-container p {
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  .card-info {
-    position: relative;
-    display: grid;
-    margin: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  .first-card h3,
-  .second-card h3,
-  .third-card h3,
-  .forth-card h3 {
-    padding: 20px 30px 0px 30px;
-  }
-
-  .first-card {
-    position: absolute;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    top: 200px;
-    height: 350px;
-  }
-
-  .second-card {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    height: 350px;
-  }
-
-  .third-card {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    height: 350px;
-  }
-
-  .forth-card {
-    grid-column-start: 3;
-    position: absolute;
-    top: 200px;
-    height: 350px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header-container p {
-    text-align: center;
-    margin-left: 230px;
-    margin-right: 230px;
-  }
-
-  .first-card,
-  .second-card,
-  .third-card,
-  .forth-card {
-    height: 250px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .header-container p {
-    text-align: center;
-    margin-left: 410px;
-    margin-right: 410px;
-  }
-
-  .card-info {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  .first-card {
-    position: absolute;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    top: 200px;
-    padding: 40px;
-    height: 250px;
-    left: 30px;
-  }
-
-  .second-card {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding: 40px;
-    height: 250px;
-  }
-
-  .third-card {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding: 40px;
-    height: 250px;
-  }
-
-  .forth-card {
-    grid-column-start: 3;
-    position: absolute;
-    top: 200px;
-    padding: 40px;
-    height: 250px;
-  }
-}
-
-```
 
 ## How GitHub Actions Work 
 Before setting up our GitHub Action, let's first understand how it works. GitHub Actions help us automate tasks like running tests, checking for syntax errors, and deploying our projects. The structure of GitHub Actions is built around three key concepts:
@@ -365,10 +133,6 @@ jobs:
       - name: Run Linter  
         run: npx htmlhint "**/*.html"  # Checks for syntax errors in HTML
 
-      - name: Run CSS Linter  
-        run: |  
-          npm install -g stylelint stylelint-config-standard  
-          stylelint "**/*.css"  # Checks for CSS syntax errors  
 ```
 
 ### Breaking it Down:
@@ -393,31 +157,29 @@ mkdir -p .github/workflows
 Inside this directory, create a file named basic-github-action.yml and add the following content:
 
 ```
-name: Linter CI
+name: HTML Linter CI
 
-on:  
-  push:  
-    branches:  
-      - master 
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
-jobs:  
-  lint-check:  
-    runs-on: ubuntu-latest  
+jobs:
+  lint-check:
+    runs-on: ubuntu-latest
 
-    steps:  
-      - name: Checkout repository  
-        uses: actions/checkout@v3  
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Install Dependencies  
-        run: |  
-          npm install -g htmlhint  
-          npm install -g stylelint stylelint-config-standard  
+      - name: Install HTML Linter
+        run: npm install -g htmlhint
 
-      - name: Run HTML Linter  
-        run: htmlhint "**/*.html"  
-
-      - name: Run CSS Linter  
-        run: stylelint "**/*.css"  
+      - name: Run HTML Linter
+        run: htmlhint "**/*.html"
 
 ```
 
@@ -427,7 +189,7 @@ Now that we have everything set up, commit and push your changes to trigger the 
 
 ```
 git add .
-git commit -m "Added HTML, CSS and GitHub Actions workflow"
+git commit -m "Added HTML and GitHub Actions workflow"
 git push origin main
 ```
 
